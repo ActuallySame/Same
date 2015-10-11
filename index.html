@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<div id="title_section">
-		<h1>same.</h1>
+		<h1 id="title_header">same.</h1>
 	</div>
 	<div id="main_image_div"><a href=""><img id="main_image" src="" onclick='changeImage("");'></a></div>
 	<script>
@@ -92,7 +92,7 @@
         	}
         	else{
         		$('#photo_section').fadeTo("medium", .2);
-        		$('#title_section').fadeTo("medium", .5);
+        		$('#title_header').fadeTo("medium", .5);
         	}
         	
         	setTimeout(function() {document.getElementById("main_image").src=a;},350);
