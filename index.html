@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
@@ -16,18 +16,40 @@
 	<div id="photo_section">
 		<div class="photo_row">
 
-			<div class="col-md-3 col-sm-4 col-xs-6">
-				<img class="img-responsive" src="http://www.osa-opn.org/opn/media/Images/AfterImages/02feb_12.jpg?width=630&height=522&ext=.jpg" />
+			<div class="col-md-3 col-sm-4 col-xs-6 photo_div">
+				<a href="#"> <img class="image" onclick='changeImage("http://www.osa-opn.org/opn/media/Images/AfterImages/02feb_12.jpg?width=630&height=522&ext=.jpg");' src="http://www.osa-opn.org/opn/media/Images/AfterImages/02feb_12.jpg?width=630&height=522&ext=.jpg"/></a>
 			</div>
 			<div class="col-md-3 col-sm-4 col-xs-6">
-				<img class="img-responsive" src="https://www.ucl.ac.uk/news/news-articles/1213/muscle-fibres-heart.jpg" />
+				<a href="#"><img class="image" onclick='changeImage("http://www.photographymad.com/files/images/rule-of-thirds-vertical.jpg");' src="http://www.photographymad.com/files/images/rule-of-thirds-vertical.jpg" /></a>
 			</div>
 			<div class="col-md-3 col-sm-4 col-xs-6">
-				<img class="img-responsive" src="https://static.dvidshub.net/media/thumbs/photos/1210/692947/463x486_q75.jpg" />
+				<a href="#"><img class="image" onclick='changeImage("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ9fSvUVvINMgiuFKK9rP5AHETr28FHAuMR8Yha_BfhfYwYwu1KCw");' src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ9fSvUVvINMgiuFKK9rP5AHETr28FHAuMR8Yha_BfhfYwYwu1KCw" /></a>
 			</div>
 			<div class="col-md-3 col-sm-4 col-xs-6">
-				<img class="img-responsive" src="http://www.gettyimages.in/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg" />
+				<a href="#"><img class="image" onclick='changeImage("http://www.apnphotographyschool.com/wp-content/uploads/2011/10/vertical-panorama.jpg");' src="http://www.apnphotographyschool.com/wp-content/uploads/2011/10/vertical-panorama.jpg" /></a>
 			</div>
 		</div>
 	</div>
+	<div id="main_image_div"><a href=""><img id="main_image" src="" onclick='changeImage("");'></a></div>
+	<script>
+		var cw = $('.image').width();
+		$('.image').css({
+
+    	'height': cw + 'px'
+    	// clip: rect(0px,cw + 'px',cw + 'px',0px);
+		});
+
+		function changeImage(a) {
+			if (a==""){
+        		$('#photo_section').fadeIn("slow");
+        	}
+        	else{
+        		$('#photo_section').fadeOut("slow");
+        	}
+        	
+        	setTimeout(function() {document.getElementById("main_image").src=a;},350);
+        	
+    	}
+	</script>
+
 </body>
