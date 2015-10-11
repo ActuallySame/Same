@@ -44,10 +44,11 @@
 
 		function changeImage(a) {
 			if (a==""){
-        		$('#photo_section').fadeIn("slow");
+        		$('#photo_section').fadeTo("medium", 1);
         	}
         	else{
-        		$('#photo_section').fadeOut("slow");
+        		$('#photo_section').fadeTo("medium", .2);
+        		$('#title_section').fadeTo("medium", .5);
         	}
         	
         	setTimeout(function() {document.getElementById("main_image").src=a;},350);
