@@ -7,7 +7,7 @@ body {
     src: url(UNICORN.TTF);
 }
 
-h1 {
+#title_section h1 {
 	font-family: 'Unicorn';
 	color: #9512b0;
 	text-align: center;
