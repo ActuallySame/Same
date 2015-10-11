@@ -1,3 +1,6 @@
+body {
+	background-color: #f6f6f6
+}
 @font-face {
     font-family: 'Unicorn'; /*a name to be used later*/
     src: url(UNICORN.TTF);
@@ -5,7 +8,7 @@
 
 h1 {
 	font-family: 'Unicorn';
-	color: #ef85ed;
+	color: #9512b0;
 	text-align: center;
 	font-size: 75px;
 }
@@ -20,6 +23,7 @@ h1 {
 	padding: 0px;
 	border-style: solid;
 	border-width: 5px;
+	border-color: #df21f6;
 }
 
 #main_image{
@@ -29,6 +33,7 @@ h1 {
 
 	border-style: solid;
 	border-width: 5px;
+	border-color: #ed85ef;
 	
 	position:fixed;
    /*element can move on the screen (only screen, not page)*/
@@ -41,4 +46,11 @@ h1 {
 
   z-index:10000;
     
+}
+
+hr {
+	color: #ed85ef;
+	width: 80%;
+	height: 10px;
+
 }
