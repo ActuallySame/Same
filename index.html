@@ -40,8 +40,15 @@
 		});
 
 		function changeImage(a) {
-			console.log("Entered function");
-        	document.getElementById("main_image").src=a;
+			if (a==""){
+        		$('#photo_section').fadeIn("slow");
+        	}
+        	else{
+        		$('#photo_section').fadeOut("slow");
+        	}
+        	
+        	setTimeout(function() {document.getElementById("main_image").src=a;},350);
+        	
     	}
 	</script>
 
