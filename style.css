@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Unicorn'; /*a name to be used later*/
+    src: url(UNICORN.TTF);
+}
+
+h1 {
+	font-family: 'Unicorn';
+}
+
 .image{
 	width: 100%;
 	object-fit: cover;
